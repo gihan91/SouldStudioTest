@@ -13,6 +13,7 @@
 		0448033A277B421E00A7B79E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04480338277B421E00A7B79E /* Main.storyboard */; };
 		0448033C277B422100A7B79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0448033B277B422100A7B79E /* Assets.xcassets */; };
 		0448033F277B422100A7B79E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0448033D277B422100A7B79E /* LaunchScreen.storyboard */; };
+		0448034D277B4C5A00A7B79E /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448034C277B4C5A00A7B79E /* BookModel.swift */; };
 		42E4F78A296E01FFB698C752 /* Pods_SoulStudioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D83D76696EA5ED65287C842 /* Pods_SoulStudioApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		0448033B277B422100A7B79E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0448033E277B422100A7B79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04480340277B422100A7B79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0448034C277B4C5A00A7B79E /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		0BCE37D02518FA9E3790CC62 /* Pods-SoulStudioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulStudioApp.release.xcconfig"; path = "Target Support Files/Pods-SoulStudioApp/Pods-SoulStudioApp.release.xcconfig"; sourceTree = "<group>"; };
 		1FF8457842980FC8A0C9981B /* Pods-SoulStudioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulStudioApp.debug.xcconfig"; path = "Target Support Files/Pods-SoulStudioApp/Pods-SoulStudioApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4D83D76696EA5ED65287C842 /* Pods_SoulStudioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulStudioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 		04480346277B4B0900A7B79E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0448034C277B4C5A00A7B79E /* BookModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				04480337277B421E00A7B79E /* ViewController.swift in Sources */,
 				04480333277B421E00A7B79E /* AppDelegate.swift in Sources */,
+				0448034D277B4C5A00A7B79E /* BookModel.swift in Sources */,
 				04480335277B421E00A7B79E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
