@@ -11,6 +11,7 @@ import RxSwift
 
 class BookViewModel {
     
+    //ViewModel Variables
     var bookList = BehaviorRelay<[Item]>(value: [Item]())
     var loadMoreBooks = BehaviorRelay<Bool>(value: false)
     var bookListItem: Int = 0
@@ -27,6 +28,7 @@ class BookViewModel {
         }
     }
     
+    //Pagination Logic
     func loadMoreBookList() -> Observable<[Item]> {
         return Observable.create { [unowned self] (observer) -> Disposable in
             if loadMoreBooks.value {

@@ -41,7 +41,6 @@ enum BookService: APIConfiguration {
         case .getBookList(let parameters):
             urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
         }
-        print("url request is \(urlRequest)")
         return urlRequest
     }
 }

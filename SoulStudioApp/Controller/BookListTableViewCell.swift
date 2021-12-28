@@ -25,6 +25,7 @@ class BookListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //Download the image from URL using kingfisher
     func downloadImage(`with` urlString : String){
         guard let url = URL.init(string: urlString) else {
             return

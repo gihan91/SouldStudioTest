@@ -43,6 +43,7 @@ class BookListViewController: UIViewController, Storyboard, UIScrollViewDelegate
 
 extension BookListViewController {
     
+    //Bind book list data
     private func bindBookTableView() {
         self.bookViewModel.bookList.observe(on: MainScheduler.instance).bind(to: self.tblBookList.rx.items){(tableView, row, model) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "BookDetailCell", for: IndexPath.init(row: row, section: 1)) as!
@@ -56,6 +57,7 @@ extension BookListViewController {
         self.fetchBookList()
     }
     
+    //Pagination
     private func loadMoreData() {
         tblBookList.rx.didEndDragging.subscribe { [weak self] _ in
             guard let self = self else { return }
