@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class BookListViewController: UIViewController, Storyboard, UIScrollViewDelegate {
     
@@ -34,8 +35,6 @@ class BookListViewController: UIViewController, Storyboard, UIScrollViewDelegate
         self.tblBookList.rx.setDelegate(self).disposed(by: disposeBag)
         tblBookList.register(UINib(nibName: "BookListTableViewCell", bundle: nil), forCellReuseIdentifier: "BookDetailCell")
     }
-    
-  
 
 }
 
@@ -47,6 +46,7 @@ extension BookListViewController {
             BookListTableViewCell
             cell.lblBookTitle.text = model.volumeInfo?.title
             cell.lblBookDescription.text = model.volumeInfo?.description ?? "No Description"
+            cell.downloadImage(with: (model.volumeInfo?.imageLinks!.smallThumbnail)!)
             return cell
         }
         
