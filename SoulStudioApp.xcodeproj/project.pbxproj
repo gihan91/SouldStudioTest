@@ -18,6 +18,14 @@
 		04480352277B4F7B00A7B79E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480351277B4F7B00A7B79E /* Coordinator.swift */; };
 		04480354277B4FF100A7B79E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480353277B4FF100A7B79E /* Storyboard.swift */; };
 		04480356277B502B00A7B79E /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480355277B502B00A7B79E /* Navigator.swift */; };
+		04480359277B570100A7B79E /* UIColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480358277B570100A7B79E /* UIColorExtention.swift */; };
+		0448035B277B57F700A7B79E /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448035A277B57F700A7B79E /* APIConfiguration.swift */; };
+		0448035D277B583400A7B79E /* ConstantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448035C277B583400A7B79E /* ConstantManager.swift */; };
+		0448035F277B58B300A7B79E /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448035E277B58B200A7B79E /* BookService.swift */; };
+		04480361277B5AFE00A7B79E /* BookServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480360277B5AFE00A7B79E /* BookServiceClient.swift */; };
+		04480363277B5C6000A7B79E /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480362277B5C6000A7B79E /* BookViewModel.swift */; };
+		04480366277B5F8D00A7B79E /* BookListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480364277B5F8D00A7B79E /* BookListTableViewCell.swift */; };
+		04480367277B5F8D00A7B79E /* BookListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04480365277B5F8D00A7B79E /* BookListTableViewCell.xib */; };
 		42E4F78A296E01FFB698C752 /* Pods_SoulStudioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D83D76696EA5ED65287C842 /* Pods_SoulStudioApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +43,14 @@
 		04480351277B4F7B00A7B79E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		04480353277B4FF100A7B79E /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		04480355277B502B00A7B79E /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		04480358277B570100A7B79E /* UIColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtention.swift; sourceTree = "<group>"; };
+		0448035A277B57F700A7B79E /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		0448035C277B583400A7B79E /* ConstantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantManager.swift; sourceTree = "<group>"; };
+		0448035E277B58B200A7B79E /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
+		04480360277B5AFE00A7B79E /* BookServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServiceClient.swift; sourceTree = "<group>"; };
+		04480362277B5C6000A7B79E /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		04480364277B5F8D00A7B79E /* BookListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewCell.swift; sourceTree = "<group>"; };
+		04480365277B5F8D00A7B79E /* BookListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookListTableViewCell.xib; sourceTree = "<group>"; };
 		0BCE37D02518FA9E3790CC62 /* Pods-SoulStudioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulStudioApp.release.xcconfig"; path = "Target Support Files/Pods-SoulStudioApp/Pods-SoulStudioApp.release.xcconfig"; sourceTree = "<group>"; };
 		1FF8457842980FC8A0C9981B /* Pods-SoulStudioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulStudioApp.debug.xcconfig"; path = "Target Support Files/Pods-SoulStudioApp/Pods-SoulStudioApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4D83D76696EA5ED65287C842 /* Pods_SoulStudioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulStudioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +95,7 @@
 				04480349277B4B1D00A7B79E /* Controller */,
 				0448034A277B4B3300A7B79E /* Services */,
 				0448034B277B4B4600A7B79E /* Managers */,
+				04480357277B56E400A7B79E /* Extentions */,
 				04480332277B421E00A7B79E /* AppDelegate.swift */,
 				04480334277B421E00A7B79E /* SceneDelegate.swift */,
 				04480336277B421E00A7B79E /* ViewController.swift */,
@@ -101,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				04480338277B421E00A7B79E /* Main.storyboard */,
+				04480365277B5F8D00A7B79E /* BookListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,6 +126,7 @@
 		04480348277B4B1500A7B79E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04480362277B5C6000A7B79E /* BookViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -115,6 +134,7 @@
 		04480349277B4B1D00A7B79E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04480364277B5F8D00A7B79E /* BookListTableViewCell.swift */,
 				0448034E277B4F1D00A7B79E /* BookListViewController.swift */,
 			);
 			path = Controller;
@@ -123,6 +143,9 @@
 		0448034A277B4B3300A7B79E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0448035A277B57F700A7B79E /* APIConfiguration.swift */,
+				0448035E277B58B200A7B79E /* BookService.swift */,
+				04480360277B5AFE00A7B79E /* BookServiceClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -131,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				04480350277B4F5900A7B79E /* NavigationManager */,
+				0448035C277B583400A7B79E /* ConstantManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -143,6 +167,14 @@
 				04480355277B502B00A7B79E /* Navigator.swift */,
 			);
 			path = NavigationManager;
+			sourceTree = "<group>";
+		};
+		04480357277B56E400A7B79E /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				04480358277B570100A7B79E /* UIColorExtention.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		79B6DCEEDEA5DF948F268713 /* Pods */ = {
@@ -222,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04480367277B5F8D00A7B79E /* BookListTableViewCell.xib in Resources */,
 				0448033F277B422100A7B79E /* LaunchScreen.storyboard in Resources */,
 				0448033C277B422100A7B79E /* Assets.xcassets in Resources */,
 				0448033A277B421E00A7B79E /* Main.storyboard in Resources */,
@@ -278,13 +311,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				04480337277B421E00A7B79E /* ViewController.swift in Sources */,
+				04480363277B5C6000A7B79E /* BookViewModel.swift in Sources */,
 				04480333277B421E00A7B79E /* AppDelegate.swift in Sources */,
 				04480352277B4F7B00A7B79E /* Coordinator.swift in Sources */,
 				04480354277B4FF100A7B79E /* Storyboard.swift in Sources */,
 				0448034D277B4C5A00A7B79E /* BookModel.swift in Sources */,
 				04480356277B502B00A7B79E /* Navigator.swift in Sources */,
 				04480335277B421E00A7B79E /* SceneDelegate.swift in Sources */,
+				0448035D277B583400A7B79E /* ConstantManager.swift in Sources */,
+				04480361277B5AFE00A7B79E /* BookServiceClient.swift in Sources */,
+				0448035F277B58B300A7B79E /* BookService.swift in Sources */,
+				0448035B277B57F700A7B79E /* APIConfiguration.swift in Sources */,
 				0448034F277B4F1D00A7B79E /* BookListViewController.swift in Sources */,
+				04480366277B5F8D00A7B79E /* BookListTableViewCell.swift in Sources */,
+				04480359277B570100A7B79E /* UIColorExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

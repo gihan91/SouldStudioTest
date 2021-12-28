@@ -6,26 +6,51 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class BookListViewController: UIViewController, Storyboard {
+class BookListViewController: UIViewController, Storyboard, UIScrollViewDelegate {
+    
+    @IBOutlet weak var tblBookList: UITableView!
     
     weak var coordinator: MainNavigator?
+    var bookViewModel = BookViewModel()
+    var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupDelegates()
+        self.bindBookTableView()
+        self.tblBookList.rowHeight = 100
+        tblBookList.rowHeight = UITableView.automaticDimension
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func fetchBookList() {
+        bookViewModel.getBookList().subscribe { bookList in }.disposed(by: disposeBag)
     }
-    */
+    
+    private func setupDelegates() {
+        self.tblBookList.rx.setDelegate(self).disposed(by: disposeBag)
+        tblBookList.register(UINib(nibName: "BookListTableViewCell", bundle: nil), forCellReuseIdentifier: "BookDetailCell")
+    }
+    
+  
 
+}
+
+extension BookListViewController {
+    
+    private func bindBookTableView() {
+        self.bookViewModel.bookList.observe(on: MainScheduler.instance).bind(to: self.tblBookList.rx.items){(tableView, row, model) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BookDetailCell", for: IndexPath.init(row: row, section: 1)) as!
+            BookListTableViewCell
+            cell.lblBookTitle.text = model.volumeInfo?.title
+            cell.lblBookDescription.text = model.volumeInfo?.description ?? "No Description"
+            return cell
+        }
+        
+        self.fetchBookList()
+    }
+    
 }
