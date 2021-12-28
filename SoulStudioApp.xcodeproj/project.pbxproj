@@ -14,6 +14,10 @@
 		0448033C277B422100A7B79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0448033B277B422100A7B79E /* Assets.xcassets */; };
 		0448033F277B422100A7B79E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0448033D277B422100A7B79E /* LaunchScreen.storyboard */; };
 		0448034D277B4C5A00A7B79E /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448034C277B4C5A00A7B79E /* BookModel.swift */; };
+		0448034F277B4F1D00A7B79E /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448034E277B4F1D00A7B79E /* BookListViewController.swift */; };
+		04480352277B4F7B00A7B79E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480351277B4F7B00A7B79E /* Coordinator.swift */; };
+		04480354277B4FF100A7B79E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480353277B4FF100A7B79E /* Storyboard.swift */; };
+		04480356277B502B00A7B79E /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04480355277B502B00A7B79E /* Navigator.swift */; };
 		42E4F78A296E01FFB698C752 /* Pods_SoulStudioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D83D76696EA5ED65287C842 /* Pods_SoulStudioApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		0448033E277B422100A7B79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04480340277B422100A7B79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0448034C277B4C5A00A7B79E /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		0448034E277B4F1D00A7B79E /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		04480351277B4F7B00A7B79E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		04480353277B4FF100A7B79E /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		04480355277B502B00A7B79E /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		0BCE37D02518FA9E3790CC62 /* Pods-SoulStudioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulStudioApp.release.xcconfig"; path = "Target Support Files/Pods-SoulStudioApp/Pods-SoulStudioApp.release.xcconfig"; sourceTree = "<group>"; };
 		1FF8457842980FC8A0C9981B /* Pods-SoulStudioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoulStudioApp.debug.xcconfig"; path = "Target Support Files/Pods-SoulStudioApp/Pods-SoulStudioApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4D83D76696EA5ED65287C842 /* Pods_SoulStudioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoulStudioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +82,6 @@
 				04480332277B421E00A7B79E /* AppDelegate.swift */,
 				04480334277B421E00A7B79E /* SceneDelegate.swift */,
 				04480336277B421E00A7B79E /* ViewController.swift */,
-				04480338277B421E00A7B79E /* Main.storyboard */,
 				0448033B277B422100A7B79E /* Assets.xcassets */,
 				0448033D277B422100A7B79E /* LaunchScreen.storyboard */,
 				04480340277B422100A7B79E /* Info.plist */,
@@ -93,6 +100,7 @@
 		04480347277B4B0F00A7B79E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04480338277B421E00A7B79E /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +115,7 @@
 		04480349277B4B1D00A7B79E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0448034E277B4F1D00A7B79E /* BookListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,8 +130,19 @@
 		0448034B277B4B4600A7B79E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				04480350277B4F5900A7B79E /* NavigationManager */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		04480350277B4F5900A7B79E /* NavigationManager */ = {
+			isa = PBXGroup;
+			children = (
+				04480351277B4F7B00A7B79E /* Coordinator.swift */,
+				04480353277B4FF100A7B79E /* Storyboard.swift */,
+				04480355277B502B00A7B79E /* Navigator.swift */,
+			);
+			path = NavigationManager;
 			sourceTree = "<group>";
 		};
 		79B6DCEEDEA5DF948F268713 /* Pods */ = {
@@ -259,8 +279,12 @@
 			files = (
 				04480337277B421E00A7B79E /* ViewController.swift in Sources */,
 				04480333277B421E00A7B79E /* AppDelegate.swift in Sources */,
+				04480352277B4F7B00A7B79E /* Coordinator.swift in Sources */,
+				04480354277B4FF100A7B79E /* Storyboard.swift in Sources */,
 				0448034D277B4C5A00A7B79E /* BookModel.swift in Sources */,
+				04480356277B502B00A7B79E /* Navigator.swift in Sources */,
 				04480335277B421E00A7B79E /* SceneDelegate.swift in Sources */,
+				0448034F277B4F1D00A7B79E /* BookListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
