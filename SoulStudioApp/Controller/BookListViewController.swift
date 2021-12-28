@@ -12,18 +12,22 @@ import Kingfisher
 
 class BookListViewController: UIViewController, Storyboard, UIScrollViewDelegate {
     
+    //MARK: - UI Outlets
     @IBOutlet weak var tblBookList: UITableView!
     
+    //MARK: - Variables
     weak var coordinator: MainNavigator?
     var bookViewModel = BookViewModel()
     var disposeBag = DisposeBag()
-
+    
+    // MARK: - Main Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupDelegates()
         self.bindBookTableView()
         self.tblBookList.rowHeight = 100
         tblBookList.rowHeight = UITableView.automaticDimension
+        self.loadMoreData()
 
     }
     
@@ -51,6 +55,19 @@ extension BookListViewController {
         }
         
         self.fetchBookList()
+    }
+    
+    private func loadMoreData() {
+        tblBookList.rx.didEndDragging.subscribe { [weak self] _ in
+            guard let self = self else { return }
+            let offSetY = self.tblBookList.contentOffset.y
+            let contentHeight = self.tblBookList.contentSize.height
+            if offSetY > (contentHeight - self.tblBookList.frame.size.height - 100) {
+                self.bookViewModel.loadMoreBooks.accept(true)
+                self.bookViewModel.loadMoreBookList().asObservable().subscribe { _ in
+                }.disposed(by: self.disposeBag)
+            }
+        }.disposed(by: disposeBag)
     }
     
 }

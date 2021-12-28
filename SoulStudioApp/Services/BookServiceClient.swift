@@ -31,7 +31,7 @@ class BookServiceClient {
         }.asObservable()
     }
     
-    static func getBookList() -> Observable<Book> {
-        return request(BookService.getBookList(parameters: ["q": "flowers", "startIndex": 0, "maxResults": 10]))
+    static func getBookList(startIndex: Int) -> Observable<Book> {
+        return request(BookService.getBookList(parameters: ["q": "flowers", "startIndex": startIndex, "maxResults": 10]))
     }
 }
