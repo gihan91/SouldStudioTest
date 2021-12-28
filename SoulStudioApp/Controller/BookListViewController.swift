@@ -8,7 +8,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import Kingfisher
 
 class BookListViewController: UIViewController, Storyboard, UIScrollViewDelegate {
     
